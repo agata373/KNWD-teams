@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    "@babel/preset-env",
+    ["@babel/preset-stage-0", {
+      "decoratorsLegacy": true
+    }]
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "babel-plugin-styled-components",
+    "@babel/plugin-transform-react-inline-elements",
+    "@babel/plugin-transform-react-constant-elements",
+    "@babel/plugin-transform-runtime",
+    [
+      "direct-import",
+      {
+        "modules": [
+          "react-router",
+          "react-router-dom"
+        ]
+      }
+    ]
+  ]
+}
