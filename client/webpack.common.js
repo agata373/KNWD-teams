@@ -2,9 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const analyzer = require('webpack-bundle-analyzer');
-
-const { BundleAnalyzerPlugin } = analyzer;
 
 module.exports = {
   entry: ['@babel/polyfill', './src/index.jsx'],
@@ -72,10 +69,6 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-    }),
-
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
     }),
 
     new ExtractTextPlugin('styles.css'),

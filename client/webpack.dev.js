@@ -2,7 +2,10 @@ const path = require('path');
 const merge = require('webpack-merge');
 const ExtendedDefinePlugin = require('extended-define-webpack-plugin');
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
+const analyzer = require('webpack-bundle-analyzer');
 const common = require('./webpack.common.js');
+
+const { BundleAnalyzerPlugin } = analyzer;
 
 module.exports = merge(common, {
   mode: 'development',
@@ -12,6 +15,9 @@ module.exports = merge(common, {
       __FONT_AWESOME__: 'local',
     }),
     new ErrorOverlayPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'public'),

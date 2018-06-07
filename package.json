@@ -12,7 +12,8 @@
     "server": "nodemon ./server/index.js",
     "client": "npm run start --prefix client",
     "build": "npm run build --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Agata Sczepańska",
   "license": "MIT",
