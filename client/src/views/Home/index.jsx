@@ -24,7 +24,7 @@ const renderLogin = () => (
   <Container>
     <StyledParticles params={config} />
     <CenterBox>
-      <Title>Zaloguj do KNWD Teams</Title>
+      <Title>Zaloguj się do KNWD Teams</Title>
       <StyledButton onClick={goToGoogleLogin}>
         <IconWrapper>
           <SVGIcon path="svg/google-logo.svg" width={32} height={32} />
