@@ -1,11 +1,11 @@
 import React from 'react';
 import { string, bool, func } from 'prop-types';
-import ReactSVG from 'react-svg';
+import { SVGIcon } from 'react-ui-framework';
 import { Container, Text } from './styles';
 
 const Item = ({ icon, name, active, onClick }) => (
   <Container active={active} onClick={onClick}>
-    <ReactSVG path={icon} width={14} height={14} fill="#fff" />
+    <SVGIcon path={icon} width={14} height={14} fill="#fff" />
     <Text>{name}</Text>
   </Container>
 );

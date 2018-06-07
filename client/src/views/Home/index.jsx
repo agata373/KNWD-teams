@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { oneOf, string, number, object } from 'prop-types';
+import { SVGIcon } from 'react-ui-framework';
 import config from './particlesjs-config';
 import LoadingScreen from '../../components/LoadingScreen';
 import {
@@ -25,7 +26,9 @@ const renderLogin = () => (
     <CenterBox>
       <Title>Zaloguj do KNWD Teams</Title>
       <StyledButton onClick={goToGoogleLogin}>
-        <IconWrapper />
+        <IconWrapper>
+          <SVGIcon path="svg/google-logo.svg" width={32} height={32} />
+        </IconWrapper>
         <Text>Zaloguj przez Google</Text>
       </StyledButton>
     </CenterBox>

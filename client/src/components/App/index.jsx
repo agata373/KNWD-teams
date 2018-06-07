@@ -22,6 +22,8 @@ class App extends PureComponent {
   }
 
   render() {
+    const isRootUrl = window.location.pathname === '/';
+
     return (
       <BrowserRouter>
         <StyledIndex
@@ -29,6 +31,7 @@ class App extends PureComponent {
           fa={__FONT_AWESOME__}
           bodyClassName="mainBody"
           before={<Navbar />}
+          isRootUrl={isRootUrl}
         >
           <Switch>
             <Route path="/tasks" component={Tasks} />

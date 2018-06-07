@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Particles from 'react-particles-js';
+import { Button } from 'react-ui-framework';
 
 export const Container = styled.div`
   position: relative;
@@ -44,7 +45,7 @@ export const Title = styled.div`
   color: var(--text1);
 `;
 
-export const StyledButton = styled.button`
+export const StyledButton = styled(Button)`
   display: flex;
   width: 312px;
   height: 64px;
